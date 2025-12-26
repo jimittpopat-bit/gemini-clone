@@ -1,5 +1,5 @@
 # 🔗 Live Demo
-👉 [View Live Demo](https://your-live-demo-link-here)
+👉 [View Live Demo](https://gemini-clone-hx06mylxt-jimitts-projects.vercel.app/)
 
 ---
 
