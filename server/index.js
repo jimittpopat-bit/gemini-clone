@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -9,21 +8,25 @@ const pool = require("./db");
 const authMiddleware = require("./authMiddleware");
 const chatRoutes = require("./routes/chatRoutes");
 const { updateTheme } = require("./controllers/userController");
-
 const app = express();
 const PORT = process.env.PORT;
 const JWT_SECRET = process.env.JWT_SECRET;
 
 /* ------------------ MIDDLEWARE ------------------ */
-
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
-    credentials: true,
-  })
-);
-
 app.use(express.json());
+
+const cors = require("cors");
+
+app.use(cors({
+  origin: [
+    "https://gemini-clone-rho-six.vercel.app",
+    "http://localhost:5173",
+    "http://localhost:5174"
+  ],
+  credentials: true
+}));
+
+
 
 /* ------------------ ROUTES ------------------ */
 
