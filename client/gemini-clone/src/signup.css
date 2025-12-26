@@ -63,45 +63,26 @@
   background: #3c74d9;
 }
 
-.login-card button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Login-only links */
-.createpass {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 220px;
-  margin-top: -8px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  color: #4f8cff;
-  cursor: pointer;
-}
-
-/* Error */
-.login-error {
-  margin-top: 12px;
-  color: #ff6b6b;
-  text-align: center;
-}
-
 /* Mobile */
 @media (max-width: 480px) {
   .gemini-logo {
     font-size: 20px;
-   
+    margin: 70px 0 0px 0;
   }
 
   .login-card {
-    width: 350px;
+    width: 340px;
+    margin-top: 20px;
   }
-
-  .createpass {
+  .createpass{
     font-size: 12px;
-    gap: 100px;
+    display: flex;
+    gap: 90px;
   }
+}
+
+@media  (max-width: 600px){
+
 }
 
 /* Dark mode */
