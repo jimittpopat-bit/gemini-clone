@@ -6,13 +6,14 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const BASE_URL = "https://gemini-clone-542w.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
     try {
-      const res = await fetch("http://localhost:8000/api/auth/login", {
+      const res = await fetch(`${BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -58,13 +59,10 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div className="createpass">
-
-              <p onClick={() => (window.location.href = "/signup")}
-              >
+              <p onClick={() => (window.location.href = "/signup")}>
                 Create an account
               </p>
-              <p onClick={() => setShowPassword((prev) => !prev)}
-              >
+              <p onClick={() => setShowPassword((prev) => !prev)}>
                 {showPassword ? "Hide password" : "Show password"}
               </p>
             </div>
