@@ -1,0 +1,112 @@
+.gemini-logo {
+  display: flex;
+  justify-content: center;
+  background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  margin-top: 100px;
+}
+.login-page {
+  align-items: center;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  margin-top: 60px;
+  width: 500px;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #dad6d6;
+  color: black;
+}
+
+.login-card input:focus {
+  outline: 2px solid #4f8cff;
+}
+
+.login-card button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #4f8cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #3c74d9;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px; /* space for eye */
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  color: #4f8cff;
+}
+.createpass {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 220px;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align: right;
+  color: #4f8cff;
+  cursor: pointer;
+}
+.login-error {
+  margin-top: 12px;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+body.dark .login-page {
+  background: #0f0f0f;
+}
+
+body.dark .login-card {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark .login-card input {
+  background: #2a2a2a;
+  color: white;
+}
+.login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
