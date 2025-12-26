@@ -2,6 +2,10 @@
 👉 [View Live Demo](https://gemini-clone-hx06mylxt-jimitts-projects.vercel.app/)
 
 ---
+## Notes
+
+⚠️ The live demo showcases the frontend UI and user experience.
+Authentication and backend APIs currently run locally and are not deployed yet.
 
 # Gemini Chat – Full Stack App
 

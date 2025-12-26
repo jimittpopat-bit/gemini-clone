@@ -16,6 +16,8 @@ const ContextProvider = (props) => {
   const [dark, setDark] = useDarkMode();
   const [error, setError] = useState("");
   const [currentChatId, setCurrentChatId] = useState(null);
+const BASE_URL = "https://gemini-clone-542w.onrender.com"
+
 
   const fetchChats = async () => {
     const token = localStorage.getItem("token");
@@ -26,7 +28,7 @@ const ContextProvider = (props) => {
     }
 
     try {
-      const res = await fetch("http://localhost:8000/api/chats", {
+      const res = await fetch(`http://${BASE_URL}/api/chats`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -50,7 +52,7 @@ const ContextProvider = (props) => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:8000/api/chats/${chatId}/messages`,
+        `http://${BASE_URL}/api/chats/${chatId}/messages`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -71,7 +73,7 @@ const ContextProvider = (props) => {
     const token = localStorage.getItem("token");
     if (!token) return null;
 
-    const res = await fetch("http://localhost:8000/api/chats", {
+    const res = await fetch(`http://${BASE_URL}/api/chats`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -101,7 +103,7 @@ const ContextProvider = (props) => {
 
     // 🔹 AUTO CREATE CHAT (home page OR New Chat)
     if (!chatId) {
-      const res = await fetch("http://localhost:8000/api/chats", {
+      const res = await fetch(`http://${BASE_URL}/api/chats`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -122,7 +124,7 @@ const ContextProvider = (props) => {
 
     try {
       // 1️⃣ Save user message
-      await fetch(`http://localhost:8000/api/chats/${chatId}/messages`, {
+      await fetch(`http://${BASE_URL}/api/chats/${chatId}/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +139,7 @@ const ContextProvider = (props) => {
       // 2️⃣ Gemini response
       const response = await gemini(userMessage);
 
-      await fetch(`http://localhost:8000/api/chats/${chatId}/messages`, {
+      await fetch(`http://${BASE_URL}/api/chats/${chatId}/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -165,7 +167,7 @@ const ContextProvider = (props) => {
     if (!token) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/api/chats/${chatId}`, {
+      const res = await fetch(`http://${BASE_URL}/api/chats/${chatId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
