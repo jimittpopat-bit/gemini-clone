@@ -1,5 +1,5 @@
 import useDarkMode from "./Custom-Hooks/DarkMode.Js";
-import "./Settings.css";
+import "./settings.css";
 
 function Settings() {
   const [dark, toggleDarkMode] = useDarkMode();
