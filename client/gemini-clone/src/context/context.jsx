@@ -28,7 +28,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
     }
 
     try {
-      const res = await fetch(`http://${BASE_URL}/api/chats`, {
+      const res = await fetch(`${BASE_URL}/api/chats`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://${BASE_URL}/api/chats/${chatId}/messages`,
+        `${BASE_URL}/api/chats/${chatId}/messages`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
     const token = localStorage.getItem("token");
     if (!token) return null;
 
-    const res = await fetch(`http://${BASE_URL}/api/chats`, {
+    const res = await fetch(`${BASE_URL}/api/chats`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -103,7 +103,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
 
     // 🔹 AUTO CREATE CHAT (home page OR New Chat)
     if (!chatId) {
-      const res = await fetch(`http://${BASE_URL}/api/chats`, {
+      const res = await fetch(`${BASE_URL}/api/chats`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -124,7 +124,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
 
     try {
       // 1️⃣ Save user message
-      await fetch(`http://${BASE_URL}/api/chats/${chatId}/messages`, {
+      await fetch(`${BASE_URL}/api/chats/${chatId}/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +139,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
       // 2️⃣ Gemini response
       const response = await gemini(userMessage);
 
-      await fetch(`http://${BASE_URL}/api/chats/${chatId}/messages`, {
+      await fetch(`${BASE_URL}/api/chats/${chatId}/messages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ const BASE_URL = "https://gemini-clone-542w.onrender.com"
     if (!token) return;
 
     try {
-      const res = await fetch(`http://${BASE_URL}/api/chats/${chatId}`, {
+      const res = await fetch(`${BASE_URL}/api/chats/${chatId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
