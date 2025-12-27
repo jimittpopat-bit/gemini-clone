@@ -17,16 +17,16 @@ app.use(express.json());
 
 const cors = require("cors");
 
-app.use(cors({
-  origin: [
-    "https://gemini-clone-rho-six.vercel.app",
-    "http://localhost:5173",
-    "http://localhost:5174"
-  ],
-  credentials: true
-}));
-
-
+app.use(
+  cors({
+    origin: [
+      "https://gemini-clone-rho-six.vercel.app",
+      "https://gemini-clone-qb0o2120w-jimitts-projects.vercel.app",
+      "http://localhost:5173",
+    ],
+    credentials: true,
+  })
+);
 
 /* ------------------ ROUTES ------------------ */
 
