@@ -13,7 +13,6 @@ const PORT = process.env.PORT;
 const JWT_SECRET = process.env.JWT_SECRET;
 
 /* ------------------ MIDDLEWARE ------------------ */
-app.use(express.json());
 
 const cors = require("cors");
 
@@ -33,6 +32,10 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.json())   // ← THIS
+app.options("*", cors());
+
 
 /* ------------------ ROUTES ------------------ */
 
@@ -115,9 +118,11 @@ app.post("/api/auth/login", async (req, res) => {
         theme: user.theme,
       },
     });
-  } catch {
-    res.status(500).json({ message: "Login failed" });
-  }
+  }catch (err) {
+  console.error("LOGIN ERROR:", err);
+  res.status(500).json({ message: "Login failed" });
+}
+
 });
 
 /* -------- USER -------- */
