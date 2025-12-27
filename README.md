@@ -24,12 +24,12 @@ https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 ---
 
 ### 💬 Chat Interface
-**Dark Mode**
-![Chat Dark](screenshots/chat-dark.png)
 
 **Light Mode**
 ![Chat Light](screenshots/chat-light.png)
 
+**Dark Mode**
+![Chat Dark](screenshots/chat-dark.png)
 ---
 
 ### ⚙️ Settings
