@@ -186,8 +186,8 @@
 
 @media (max-width: 600px) {
   .main-bottom input {
-    flex: none;
-    width: 295px;
+    flex: 1;
+    min-width: 0;
   }
   .main-bottom img {
     width: 20px;
@@ -201,14 +201,13 @@
   }
 }
 
-/* message wrapper */
 .message {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-/* USER message → right */
+
 .message.user {
   align-items: flex-end;
 }
@@ -225,7 +224,7 @@
   max-width: 70%;
 }
 
-/* AI message → left */
+
 .message.ai {
   align-items: flex-start;
 }
@@ -252,7 +251,7 @@
   background-color: #2a2a2a;
   color: #fff;
 }
-/* title row (avatar + label) */
+
 .result-title {
   display: flex;
   align-items: center;
@@ -262,9 +261,6 @@
   opacity: 0.7;
 }
 
-/* markdown spacing */
-
-/* give breathing space from container edges */
 .message.user .result-data {
   margin-right: 8px;
 }
@@ -274,7 +270,7 @@
 }
 
 .search-box {
-  overflow: visible;   /* allow icons to render */
+  overflow: visible;   
 }
 
 .search-box img {

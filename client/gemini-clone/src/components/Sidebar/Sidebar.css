@@ -67,11 +67,10 @@
 
 @media (max-width: 600px) {
   .sidebar {
-    display: none;
+    width: 10;
   }
 }
 
-/* One chat row */
 .chat-item {
   display: flex;
   align-items: center;
@@ -85,14 +84,12 @@
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-/* Left side: title only */
 .chat-left {
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-/* Chat title */
 .chat-title {
   white-space: nowrap;
   overflow: hidden;
@@ -100,7 +97,6 @@
   font-size: 14px;
 }
 
-/* Delete (trash) icon */
 .chat-delete {
   opacity: 0.5;
   cursor: pointer;

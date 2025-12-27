@@ -12,6 +12,11 @@ const Main = () => {
   useEffect(() => {
     messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
+
+  const handleCardClick = (cardText) => {
+    setInput(cardText);
+    onSent(cardText);
+  };
   return (
     <div className="main">
       <div className="nav">
@@ -29,25 +34,53 @@ const Main = () => {
               <p>How can i help you today</p>
             </div>
             <div className="cards">
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    "Suggest beautiful places to see on an upcoming road trip"
+                  )
+                }
+              >
                 <p>Suggest beautiful places to see on an upcoming road trip</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    "What's the best way to stay productive while working from home without burning out?"
+                  )
+                }
+              >
                 <p>
                   What's the best way to stay productive while working from home
                   without burning out?
                 </p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    " Explain how blockchain technology works and why people say it's revolutionary for finance"
+                  )
+                }
+              >
                 <p>
                   Explain how blockchain technology works and why people say
                   it's revolutionary for finance
                 </p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    "What are some beginner-friendly project ideas to build and add to my portfolio as a developer?"
+                  )
+                }
+              >
                 <p>
                   What are some beginner-friendly project ideas to build and add
                   to my portfolio as a developer?
@@ -112,7 +145,7 @@ const Main = () => {
             <input
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  onSent();
+                  onSent(input);
                 }
               }}
               onChange={(e) => setInput(e.target.value)}
@@ -126,17 +159,13 @@ const Main = () => {
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
               {input ? (
-                <img
-                  onClick={() => onSent()}
-                  src={assets.send_icon}
-                  alt=""
-                />
+                <img onClick={() => onSent()} src={assets.send_icon} alt="" />
               ) : null}
             </div>
           </div>
           <p className="bottom-info">
-            Gemini may display inaccurate info, imcluding about people, so
-            double-check its reponses. Your privacy and Gemini Apps
+            Gemini may display inaccurate info, including about people, so
+            double-check its responses. Your privacy and Gemini Apps
           </p>
         </div>
       </div>

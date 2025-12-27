@@ -8,7 +8,6 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const [extended, setExtended] = useState(false);
   const {
-    newChat,
     setCurrentChatId,
     fetchMessages,
     chats,
@@ -48,7 +47,7 @@ const Sidebar = () => {
                   onClick={() => {
                     setCurrentChatId(chat.id);
                     fetchMessages(chat.id);
-                    navigate("newchat")
+                    navigate("/newchat")
                   }}
                 >
                   <p className="chat-title">
