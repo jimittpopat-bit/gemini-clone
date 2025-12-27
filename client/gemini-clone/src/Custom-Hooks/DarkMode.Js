@@ -19,13 +19,14 @@ export default function useDarkMode() {
   const toggleDarkMode = async () => {
     const token = localStorage.getItem("token");
     const newTheme = dark ? "light" : "dark";
+    const BASE_URL = "https://gemini-clone-542w.onrender.com";
 
     // UI update
     setDark(!dark);
 
     // backend sync
     try {
-      await fetch("http://localhost:8000/api/user/theme", {
+      await fetch(`${BASE_URL}/api/user/theme`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
