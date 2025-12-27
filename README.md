@@ -3,7 +3,6 @@
 =======
 # 🔗 Live Demo
 👉 [View Live Demo](https://gemini-clone-dzsh50jif-jimitts-projects.vercel.app/)
->>>>>>> 6e4ef0e033cc5d5e334d0ca1140885be513ff7ba
 
 A full-stack **Gemini-inspired AI chat application** built to demonstrate modern frontend, backend, authentication, and database integration practices.
 
