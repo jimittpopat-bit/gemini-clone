@@ -19,11 +19,17 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: [
-      "https://gemini-clone-rho-six.vercel.app",
-      "https://gemini-clone-qb0o2120w-jimitts-projects.vercel.app",
-      "http://localhost:5173",
-    ],
+    origin: function (origin, callback) {
+      if (
+        !origin ||
+        origin.includes("vercel.app") ||
+        origin.includes("localhost")
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
