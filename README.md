@@ -1,102 +1,147 @@
-# 🔗 Live Demo
-👉 [View Live Demo](https://gemini-clone-hx06mylxt-jimitts-projects.vercel.app/)
+# Gemini Clone 🤖✨
 
----
-## Notes
+A full-stack **Gemini-inspired AI chat application** built to demonstrate modern frontend, backend, authentication, and database integration practices.
 
-⚠️ The live demo showcases the frontend UI and user experience.
-Authentication and backend APIs currently run locally and are not deployed yet.
-
-# Gemini Chat – Full Stack App
-
-A full-stack Gemini-style chat application built to demonstrate frontend–backend integration, authentication, and persistent data handling.
+🔗 **Live Demo**:  
+https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 
 ---
 
-## 🧰 Tech Stack
+## 📸 Screenshots
+
+### 🔐 Authentication
+**Login Page**
+![Login](screenshots/login.png)
+
+**Create Account**
+![Signup](screenshots/signup.png)
+
+---
+
+### 💬 Chat Interface
+**Dark Mode**
+![Chat Dark](screenshots/chat-dark.png)
+
+**Light Mode**
+![Chat Light](screenshots/chat-light.png)
+
+---
+
+### ⚙️ Settings
+**Theme Toggle & Logout**
+![Settings](screenshots/settings.png)
+
+---
+
+## 🚀 Features
+
+- User Authentication (Signup & Login)
+- JWT-based secure sessions
+- Chat interface inspired by Google Gemini
+- Persistent chat history
+- Light / Dark mode toggle
+- Responsive UI
+- Deployed full-stack app (Frontend + Backend)
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 - React
 - Vite
-- HTML, CSS, JavaScript
-- React Context API
+- CSS / Tailwind (if used)
+- Deployed on **Vercel**
 
 ### Backend
 - Node.js
-- Express
+- Express.js
+- JWT Authentication
+- bcrypt for password hashing
+- Deployed on **Render**
 
 ### Database
 - PostgreSQL
-
-### Authentication
-- JWT (JSON Web Tokens)
-
-### AI
-- Google Gemini API
+- Hosted on **Neon DB**
 
 ---
 
-## ✨ Features
+## 🗄 Database Schema
 
-- User authentication (Login & Signup)
-- Create, view, and delete chats
-- Persistent chat messages per user
-- Protected routes with ownership checks
-- Dark / Light mode (with backend sync)
-- Markdown rendering for AI responses
-- Clean, professional login UI
+- **users**
+  - id
+  - name
+  - email (unique)
+  - password (hashed)
+  - theme
+  - created_at
+
+- **chats**
+  - id
+  - user_id (FK)
+  - title
+  - created_at
+
+- **messages**
+  - id
+  - chat_id (FK)
+  - sender
+  - content
+  - created_at
 
 ---
 
-## 🔄 Application Flow
+## 🔐 Environment Variables
 
-- User logs in and receives a JWT
-- All chat routes are protected using authentication middleware
-- Chats are scoped to the logged-in user
-- Messages are stored and retrieved per chat
-- Global state is managed using React Context
-- Frontend communicates with backend via REST APIs
+Backend requires the following environment variables:
 
----
+```env
+DATABASE_URL=your_neon_database_url
+JWT_SECRET=your_jwt_secret
 
-## ▶️ Running the Project Locally
+# Clone repository
+git clone https://github.com/your-username/gemini-clone.git
 
-### Backend
-```bash
+# Install backend dependencies
 cd server
 npm install
-npm run dev
 
-
-Frontend
-cd client
+# Install frontend dependencies
+cd ../client/gemini-clone
 npm install
+
+
+<!-- Run locally -->
+
+# Backend
 npm run dev
 
-Create a .env file using .env.example before running the project.
+# Frontend
+npm run dev
 
 
+<!-- 🎯 Why this project? -->
+* This project was built to:
 
-📚 What I Learned
+* Demonstrate full-stack development skills
 
-Designing and working with relational database schemas
+* Show real-world debugging & deployment experience
 
-Implementing authentication and authorization using JWT
+* Practice secure authentication flows
 
-Structuring a full-stack application (client/server separation)
+* Work with cloud PostgreSQL (Neon)
 
-Managing global state and async flows in React
-
-Debugging real-world frontend–backend integration issues
+* Deploy production-ready apps
 
 
+<!-- 📌 Notes -->
+* Signup may fail if the email already exists (unique constraint).
 
-🚧 Limitations & Future Improvements
+* Authentication is required for chat access.
 
-Move Gemini API calls fully to the backend
+* Built primarily as a portfolio & interview project.
 
-Improve centralized error handling
+🙌 Author
 
-Add rate limiting and abuse protection
-
-Improve scalability and logging
+Built by [Jimitt Popat]
+Feel free to reach out for collaboration or feedback!
