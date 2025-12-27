@@ -1,8 +1,16 @@
 
 # Gemini Clone 🤖✨
+
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-green)
+![React](https://img.shields.io/badge/React-18-blue)
+![Node](https://img.shields.io/badge/Node-Express-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+
 =======
+
 # 🔗 Live Demo
-👉 [View Live Demo](https://gemini-clone-dzsh50jif-jimitts-projects.vercel.app/)
+👉 [View Live Demo](https://gemini-clone-rho-six.vercel.app/)
 
 A full-stack **Gemini-inspired AI chat application** built to demonstrate modern frontend, backend, authentication, and database integration practices.
 
