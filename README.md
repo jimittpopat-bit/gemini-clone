@@ -55,7 +55,7 @@ https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 ### Frontend
 - React
 - Vite
-- CSS / Tailwind (if used)
+- CSS 
 - Deployed on **Vercel**
 
 ### Backend
