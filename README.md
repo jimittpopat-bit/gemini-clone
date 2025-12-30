@@ -9,11 +9,11 @@
 
 =======
 
+# 🔗 Live Demo
+👉 [View Live Demo](https://gemini-clone-rho-six.vercel.app/)
 
 A full-stack **Gemini-inspired AI chat application** built to demonstrate modern frontend, backend, authentication, and database integration practices.
 
-🔗 **Live Demo**:  
-https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 
 ---
 
@@ -54,8 +54,6 @@ https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 - Deployed full-stack app (Frontend + Backend)
 
 ---
-# 🔗 Live Demo
-👉 [View Live Demo](https://gemini-clone-rho-six.vercel.app/)
 
 ## 🛠 Tech Stack
 
@@ -122,6 +120,8 @@ npm install
 cd ../client/gemini-clone
 npm install
 
+🔗 **Live Demo**:  
+https://gemini-clone-mvbkffqzu-jimitts-projects.vercel.app/
 
 <!-- Run locally -->
 
